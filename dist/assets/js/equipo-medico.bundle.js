@@ -1,1 +1,1 @@
-console.log("Equipo Medico");
+console.log("Cargando ".concat("Equipo Medico"));

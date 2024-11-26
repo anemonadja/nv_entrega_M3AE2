@@ -1,2 +1,2 @@
-let TitlePage = 'Equipo Medico';
-console.log(TitlePage);
+const titlePage = 'Equipo Medico';
+console.log(`Cargando ${titlePage}`);

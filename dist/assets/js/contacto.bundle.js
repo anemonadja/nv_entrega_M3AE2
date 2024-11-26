@@ -1,1 +1,1 @@
-console.log("Contacto");
+console.log("Cargando ".concat("Contacto"));
