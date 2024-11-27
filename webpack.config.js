@@ -13,6 +13,7 @@ module.exports = {
     home: './src/js/home.js',
     'equipo-medico': './src/js/equipo-medico.js',
     contacto: './src/js/contacto.js',
+    citas: './src/js/citas.js',
   },
   output: {
     filename: 'assets/js/[name].bundle.js',
@@ -42,6 +43,11 @@ module.exports = {
         template: './src/html/contacto.html', 
         filename: 'contacto.html',
         chunks: ['main','contacto']
+      }),
+      new HtmlWebpackPlugin({ 
+        template: './src/html/citas.html', 
+        filename: 'citas.html',
+        chunks: ['main','citas']
       }),
       new CopyPlugin({
         patterns: [{ from: 'src/images', to: 'images' }],

@@ -1,0 +1,21 @@
+export class Cola {
+  constructor() {
+    this.queue = [];
+  }
+
+  enqueue(item) {
+    this.queue.push(item);
+  }
+
+  dequeue() {
+    return this.queue.shift();
+  }
+
+  isEmpty() {
+    return this.queue.length === 0;
+  }
+
+  length() {
+    return this.queue.length;
+  }
+}

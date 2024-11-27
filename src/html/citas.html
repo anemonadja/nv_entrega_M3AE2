@@ -106,9 +106,8 @@
         <nav class="nav nav-masthead justify-content-center float-md-end">
           <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="home.html">Home</a>
           <a class="nav-link fw-bold py-1 px-0" href="equipo-medico.html">Equipo Medico</a>
-          <a class="nav-link fw-bold py-1 px-0 active" href="contacto.html">Contacto</a>
-          <a class="nav-link fw-bold py-1 px-0" href="citas.html">Citas</a>
-
+          <a class="nav-link fw-bold py-1 px-0" href="contacto.html">Contacto</a>
+          <a class="nav-link fw-bold py-1 px-0 active" href="citas.html">Citas</a>
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Reservar Cita
@@ -120,44 +119,44 @@
     <main class="px-3 mt-5">
       <div class="row">
         <div class="col">
-          <h1>Contacto</h1>
+          <h1>Citas</h1>
           <p class="lead">
-          Escríbenos y resuelve tus dudas.
+            <p>Listado de citas agendadas</p>
           </p>
         </div>
       </div>
 
       <div class="row">
-        <form>
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre">
-          </div>
-          <div class="mb-3">
-            <label for="correo" class="form-label">Correo</label>
-            <input type="email" class="form-control" id="correo">
-          </div>
-          <div class="mb-3">
-            <label for="asunto" class="form-label">Asunto</label>
-            <input type="text" class="form-control" id="asunto">
-          </div>
-          <div class="mb-3">
-            <label for="mensaje" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="mensaje"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+        <div class="col-md-12">
+          <table class="table table-striped" data-bs-theme="dark" id="listado-citas">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Rut</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Hora</th>
+              </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+          </table>
+        </div>
       </div>
 
-      <div class="row mt-4">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.5490894052555!2d-70.64436172466094!3d-33.46105237338528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c52befb3a815%3A0x98576c8ccdfdd188!2sHospital%20San%20Borja%20Arriar%C3%A1n!5e0!3m2!1ses!2scl!4v1731295632591!5m2!1ses!2scl" 
-        width="800" 
-        height="600" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      <div class="row mt-5">
+        <input type="text" class="form-control" id="nombre">
+
+        <button type="button" class="btn btn-primary mt-2" id="agendar">Agendar</button>
+      </div>
+
+      <div class="row mt-5" id="pacientes-por-atender"></div>
+
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <button type="button" class="btn btn-primary" id="atender">Atender</button>
+        </div>
       </div>
     </main>
 
